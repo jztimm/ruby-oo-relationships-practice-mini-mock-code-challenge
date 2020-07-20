@@ -1,14 +1,17 @@
 require 'pry'
 require_relative './book'
 require_relative './author'
+require_relative './book_author'
 
-b1 = Book.new("Jzavier", "How to fly", 250)
-b2 = Book.new("Jzavier", "The rabit", 100)
-b3 = Book.new("Jzavier", "Got it baby!", 1000)
-b4 = Book.new("Joe", "Tests", 100000)
+jzavier = Author.new("Jzavier")
+joe = Author.new("Joe")
 
-a1 = Author.new("Jzavier")
-a2 = Author.new("Joe")
+
+# b1 = Book.new(jzavier, "How to fly", 250)
+# b2 = Book.new(jzavier, "The rabit", 100)
+# b3 = Book.new(jzavier, "Got it baby!", 1000)
+# b4 = Book.new(joe, "Tests", 100000)
+
 
 binding.pry
 

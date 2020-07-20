@@ -2,13 +2,12 @@
 
 class Book
 
+    attr_reader :title, :word_count
+    
     @@all = []
 
-    attr_accessor :author, :title, :word_count
-
-    def initialize(author, title, word_count)
+    def initialize(title, word_count)
         @title = title
-        @author = author
         @word_count = word_count
         @@all << self
     end
@@ -17,19 +16,13 @@ class Book
         @@all
     end
 
-    # def author
-    #     self.all.select { |ele|
-    #     ele.author == self
-    #     }
-    # end
+    def book_author
+        BookAuthor.all.select { |book_author| book_author.book == self }
+    end
 
-    # def word_count
-    #     Author.all.find { |ele|
-    #     ele == word_count
-    #     }
-    #     binding.pry
-    # end
-
+    def authors
+        self.book_authors.select { |author| book_author| book_author.author}.uniq
+    end
 
 
 end
